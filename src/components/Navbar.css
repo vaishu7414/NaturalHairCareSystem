@@ -1,0 +1,219 @@
+.app-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0.9rem 0;
+  background: rgba(30, 24, 20, 0.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.app-shell-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.app-navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  color: #fff7ef !important;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.brand-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-block: 0.1rem;
+}
+
+.brand-title::after {
+  content: '';
+  width: 78%;
+  height: 1px;
+  margin-top: 0.18rem;
+  background: linear-gradient(90deg, rgba(240, 199, 145, 0.95), rgba(240, 199, 145, 0.08));
+}
+
+.brand-title-top {
+  display: block;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f4d4ac;
+  opacity: 0.95;
+}
+
+.brand-title-bottom {
+  display: block;
+  margin-top: -0.08rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff8f0;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+}
+
+.brand-logo {
+  width: 3.25rem;
+  height: 3.25rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(240, 199, 145, 0.38);
+  box-shadow:
+    0 8px 18px rgba(159, 108, 71, 0.35),
+    0 0 0 4px rgba(255, 255, 255, 0.05);
+}
+
+.app-navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.app-navbar-collapse {
+  justify-content: flex-end;
+}
+
+.app-navbar-links {
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.app-nav-link {
+  color: rgba(255, 247, 239, 0.78) !important;
+  margin-left: 0.55rem;
+  padding: 0.7rem 1rem !important;
+  border-radius: 999px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.app-nav-link:hover {
+  color: #fffdf8 !important;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.app-nav-link-active {
+  color: #fffdf8 !important;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.app-nav-cta {
+  background: linear-gradient(135deg, #e8c08d 0%, #b97f4f 100%);
+  color: #2f2017 !important;
+  font-weight: 700;
+}
+
+.app-nav-cta:hover {
+  background: linear-gradient(135deg, #f0c791 0%, #c48756 100%);
+  color: #2f2017 !important;
+}
+
+.navbar-user {
+  color: #fff7ef !important;
+  font-weight: 600;
+}
+
+.app-user-chip {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 999px;
+  padding-inline: 0.9rem !important;
+}
+
+.navbar-role {
+  margin-left: 0.35rem;
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(232, 192, 141, 0.2);
+  color: #f6d4a9;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+}
+
+.nav-button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.navbar-admin-hint {
+  color: rgba(255, 247, 239, 0.58) !important;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 991.98px) {
+  .app-navbar-collapse {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 1.2rem;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.18);
+  }
+
+  .app-navbar-links {
+    align-items: stretch;
+    gap: 0.45rem;
+  }
+
+  .app-navbar-links .nav-item {
+    width: 100%;
+  }
+
+  .app-nav-link {
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .app-user-chip,
+  .navbar-admin-hint {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .app-navbar {
+    padding: 0.8rem 0;
+  }
+
+  .app-navbar-brand {
+    gap: 0.7rem;
+  }
+
+  .brand-title {
+    padding-block: 0;
+  }
+
+  .brand-title-top {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+  }
+
+  .brand-title-bottom {
+    font-size: 1.16rem;
+    letter-spacing: 0.08em;
+  }
+
+  .brand-logo {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

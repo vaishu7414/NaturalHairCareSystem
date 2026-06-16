@@ -1,0 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+.main-content {
+  flex: 1;
+  min-height: calc(100vh - 180px);
+}
